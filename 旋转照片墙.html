@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>测试</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style type="text/css">
+*{margin:0; padding:0; list-style:none;}
+body{
+	perspective: 1000px;
+}
+.box{
+	width: 120px;
+	height: 200px;
+	border: 1px solid #000;
+	position: relative;
+	margin: 150px auto 0;
+	transform-style: preserve-3d;
+	transform:rotateX(-30deg) rotateY(0);
+	animation:run 8s linear 1s infinite; 
+}
+.box img{
+	width: 120px;
+	height: 200px;
+	border: 2px solid green;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 5%;
+}
+.box img:nth-child(1){
+	transform: translateZ(254px);
+}
+.box img:nth-child(2){
+	transform:rotateY(30deg) translateZ(224px);
+}
+.box img:nth-child(3){
+	transform:rotateY(60deg) translateZ(254px);
+}
+.box img:nth-child(4){
+	transform:rotateY(90deg) translateZ(224px);
+}
+.box img:nth-child(5){
+	transform:rotateY(120deg) translateZ(254px);
+}
+.box img:nth-child(6){
+	transform:rotateY(150deg) translateZ(224px);
+}
+.box img:nth-child(7){
+	transform:rotateY(180deg) translateZ(254px);
+}
+.box img:nth-child(8){
+	transform:rotateY(210deg) translateZ(224px);
+}
+.box img:nth-child(9){
+	transform:rotateY(240deg) translateZ(254px);
+}
+.box img:nth-child(10){
+	transform:rotateY(270deg) translateZ(224px);
+}
+.box img:nth-child(11){
+	transform:rotateY(300deg) translateZ(254px);
+}
+.box img:nth-child(12){
+	transform:rotateY(330deg) translateZ(224px);
+}
+@keyframes run{
+	0%{transform:rotateX(-14deg) rotateY(0);}
+	50%{transform:rotateX(14deg) rotateY(180deg);}
+	100%{transform:rotateX(-14deg) rotateY(360deg);}
+} 
+/* @keyframes runs{
+	0%{transform: rotateX(-30deg) rotateY(0);}
+	25%{transform: rotateX(-10deg) rotateY(120deg);}
+	50%{transform: rotateX(10deg) rotateY(240deg);}
+	100%{transform: rotateX(30deg) rotateY(360deg);}
+} */
+</style>
+</head>
+<body>
+<div class="box">
+	<img src="img/01.jpg" alt="">
+	<img src="img/02.jpg" alt="">
+	<img src="img/03.jpg" alt="">
+	<img src="img/04.jpg" alt="">
+	<img src="img/05.jpg" alt="">
+	<img src="img/06.jpg" alt="">
+	<img src="img/07.jpg" alt="">
+	<img src="img/08.jpg" alt="">
+	<img src="img/09.jpg" alt="">
+	<img src="img/10.jpg" alt="">
+	<img src="img/11.jpg" alt="">
+	<img src="img/12.jpg" alt="">
+</div>
+
+
+<script>
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
