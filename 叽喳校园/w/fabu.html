@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>我要发布</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/ort.js"></script>
+</head>
+<body>
+	<div class="W">
+		<div class="w-1">
+			<a href="script:;">
+				<img src="img/z_left.png" alt="">
+			</a>
+			<p>我要发布</p>
+		</div>
+		<div class="w-2">
+			<ul>
+				<li class="li-10">
+					<img src="img/z_21.png" alt="">
+				</li>
+				<li class="li-11">
+					<img src="img/z_22.png"alt="">
+				</li>
+				<li class="li-12">
+					
+						<img src="img/z_23.png" alt="">
+					
+				</li>
+			</ul>
+		</div>
+		<div class="w-3">
+			<span>标题</span>
+			<input type="text" name="" value="">
+		</div>
+		<div class="w-4">
+			<span>价格</span>
+			<input type="text" name="" value="">
+		</div>
+		<div class="w-5">
+			<span>联系方式</span>
+			<input type="text" name="" value="">
+		</div>
+		<div class="w-6">
+			<span>描述</span>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			$(".w-1").on("click","a",function(){
+				history.back();
+			});
+			$(".li-12").on("click",function(){
+				window.open("album.html","_self");
+			});
+		});
+	</script>
+</body>
+</html>

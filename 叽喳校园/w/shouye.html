@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>首页</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/ort.js"></script>
+</head>
+<body>
+	<div class="S">
+		<div class="s-1" id="s-4">
+		<div id="s-5">
+			<a id="w4">
+				<img src="img/z_left.png" alt="">
+				<img id="s-1" src="img/z_left.png" alt="">
+			</a>
+			<p>跳蚤市场</p>
+			<a class="s-2" href="liebiao.html">
+				<img class="s_2" src="img/z_search.png" alt="">
+			</a>
+		</div>
+		<!-- <div id="s-2">
+			<input type="text" value="搜索你想要的">
+			<a href="javascript:;">
+		</div> -->
+		</div>
+		<div class="s-3"></div>
+		<div class="s-4">
+			<ul>
+				<li class="li-1">
+					<a href="script:;">
+						<img src="img/z_02.png" alt="">
+					</a>
+					<span>
+					手机
+					</span>
+				</li>
+				<li class="li-2">
+					<a href="script:;">
+						<img src="img/z_03.png" alt="">
+					</a>
+					<span>
+					电脑
+					</span>
+				</li>
+				<li class="li-3">
+					<a href="script:;">
+						<img src="img/z_04.png" alt="">
+					</a>
+					<span>
+						书籍
+					</span>
+				</li>
+				<li class="li-4">
+					<a href="script:;">
+						<img src="img/z_05.png" alt="">
+					</a>
+					<span>
+						自行车
+					</span>
+				</li>
+				<li class="li-5">
+					<a href="script:;">
+						<img src="img/z_06.png" alt="">
+					</a>
+					<span>
+						游戏
+					</span>
+				</li>
+				<li class="li-6">
+					<a href="script:;">
+						<img src="img/z_07.png" alt="">
+					</a>
+					<span>
+						衣物
+					</span>
+				</li>
+				<li class="li-7">
+					<a href="script:;">
+						<img src="img/z_08.png" alt="">
+					</a>
+					<span>
+						更多
+					</span>
+				</li>
+			</ul>
+		</div>
+		<div class="s-5">
+			<img src="img/z_lab.png" alt="">
+			<h1>最新上架</h1>
+		</div>
+		<div class="s-6">
+			<ul>
+				<li class="li-8">
+					<img src="img/z_09.png" alt="">
+					<span>
+						时尚工艺品
+					</span>
+					<h1>5分钟前</h1>
+				</li>
+				<li class="li-9">
+					<img src="img/z_11.png" alt="">
+					<span>
+						ipad 九成新
+					</span>
+					<h1>
+						5分钟之前
+					</h1>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script>
+	$(function(){
+		$(".s-6").on("click","li",function(){
+			window.open("xiangxi.html","_self");
+		});
+	});
+	// 返回首页
+	$("#w4 img").eq(0).click(function () {
+		window.open("inde.html","_self")
+	});
+</script>
+</html>

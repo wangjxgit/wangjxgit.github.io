@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/ort.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/myjs.js"></script>
+</head>
+<body>
+	<div class="b-wrapper">
+		<div class="g-newsHeader">
+			<div id="w-Return" style="display:block"></div>
+		</div>
+		<div id="b-subnav">
+			<img class="b-subnav-i" src="img/b-txxj.png" alt="">
+			<p>添加头像</p>
+		</div>
+		<div class="b-menu">
+			<div class="b-submenu">
+				<div id="b-submenu1">
+					<img id="b-submenu1i" src="img/b-sj.png" alt="">
+					<input id="b-submenu1i1" type="text" name="" value="请输入手机号">
+				</div>
+				<div id="b-submenu2">
+					<img id="b-submenu2i1" src="img/b-s.png" alt="">
+					<input id="b-submenu2i2" type="text" name="" value="请输入6~16位数字做密码">
+				</div>
+				<div id="b-submenu3">
+					<img id="b-submenu3i" src="img/b-sj.png" alt="">
+					<input id="b-submenu3i3" type="text" name="" value="........">
+				</div>
+				<div id="b-submenu4">
+					<p>获取验证码</p>
+				</div>
+				<div id="b-submenu5"><a href="javascript:;">注册</a></div>
+				<div id="b-submenu6">
+					<div id="b-submenu6d"><a id="b-submenu6da" href="javascript:;">快速登录</a></div>
+					<div id="b-submenu6d1"><a id="b-submenu6d1a" href="javascript:;">我同意</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 返回登录
+		$("#w-Return").click(function () {
+			window.open("dl.html","_self");
+		});
+		$("#b-submenu6da").on("click",function(){
+			window.open("dl.html","_self");
+		});
+		$("#b-submenu1 input").focus(function () {
+			if ($("#b-submenu1 input").get(0).value=="请输入手机号") {
+				$("#b-submenu1 input").val("");
+				$("#b-submenu1 input").css("color","#000");
+			}
+		});
+		$("#b-submenu1 input").blur(function () {
+			if ($("#b-submenu1 input").get(0).value=="") {
+				$("#b-submenu1 input").val("请输入手机号");
+				$("#b-submenu1 input").css("color","#ccc");
+			}
+		})
+		$("#b-submenu2 input").focus(function () {
+			if ($("#b-submenu2 input").get(0).value=="请输入6~16位数字做密码") {
+				$("#b-submenu2 input").val("");
+				$("#b-submenu2 input").css("color","#000");
+			}
+		});
+		$("#b-submenu2 input").blur(function () {
+			if ($("#b-submenu2 input").get(0).value=="") {
+				$("#b-submenu2 input").val("请输入6~16位数字做密码");
+				$("#b-submenu2 input").css("color","#ccc");
+			}
+		})
+		$("#b-submenu3 input").focus(function () {
+			if ($("#b-submenu3 input").get(0).value=="........") {
+				$("#b-submenu3 input").val("");
+				$("#b-submenu3 input").css("color","#000");
+			}
+		});
+		$("#b-submenu3 input").blur(function () {
+			if ($("#b-submenu3 input").get(0).value=="") {
+				$("#b-submenu3 input").val("........");
+				$("#b-submenu3 input").css("color","#ccc");
+			}
+		})
+		//注册
+		$("#b-submenu5").click(function(){
+			if(!(/^1[34578]\d{9}$/.test($("#b-submenu1 input").get(0).value))){
+				alert($("#b-submenu1 input").get(0).value);
+				alert("请正确输入手机号");
+			}else{
+				if(!(/\d{6,16}/.test($("#b-submenu2 input").get(0).value))){
+					alert("请正确输入密码");
+				}else{
+					if($("#b-submenu3 input").get(0).value!="........"){
+						alert("验证码错误");
+					}else{
+						setcookie(3,"账号",$("#b-submenu1 input").get(0).value);
+						setcookie(3,"密码",$("#b-submenu2 input").get(0).value);
+						window.open("dl.html","_self");
+					}
+				}
+			}
+
+		})
+
+	</script>
+</body>
+</html>

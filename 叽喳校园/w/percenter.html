@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>个人中心</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/ort.js"></script>
+	<script src="js/myjs.js"></script>
+</head>
+<body>
+	<div class="g-newsOuter">
+		<!-- 头部 -->
+		<div class="g-newsHeader">
+			<div id="w-Return" style="display:block"></div>
+			<h3 id="g-newsSelect">个人中心</h3>
+		</div>
+		<!-- 内容 -->
+		<div id="g-perCon">
+			<div id="g-perTop">
+				<div id="g-perTimg">
+					<img src="img/b-dtx.jpg">
+				</div>
+				<h3>点击登录</h3>
+			</div>
+			<!-- 我的收藏 -->
+			<h3 class="g-perCen" id="g-perMyCollect">
+				<p class="g-perCenCon">
+					<span class="g-perConxb">
+						<img src="img/g-persc.png">
+					</span>
+					<span class="g-perConbt">我的收藏</span>
+					<span class="g-perConR"></span>
+				</p>
+				<p class="g-perUn"></p>
+			</h3>
+			<!-- 我的消息 -->
+			<h3 class="g-perCen g-perCenb">
+				<p class="g-perCenCon" id="mymess">
+					<span class="g-perConxb g-perConxx">
+						<img src="img/g-perxx.png">
+					</span>
+					<span class="g-perConbt">我的消息</span>
+					<span class="g-perConR"></span>
+				</p>
+				<p class="g-perUn g-perUnb"></p>
+			</h3>
+			<!-- 我的圈子 -->
+			<h3 class="g-perCen g-perCenb">
+				<p class="g-perCenCon" id="myfriend">
+					<span class="g-perConxb g-perConqz">
+						<img src="img/g-perqz.png">
+					</span>
+					<span class="g-perConbt">我的圈子</span>
+					<span class="g-perConR"></span>
+				</p>
+				<p class="g-perUn g-perUnb"></p>
+			</h3>
+			<!-- 相册 -->
+			<h3 class="g-perCen g-perCenb" id="g-perMyAlbum">
+				<p class="g-perCenCon">
+					<span class="g-perConxb g-perConxc">
+						<img src="img/g-perxc.png">
+					</span>
+					<span class="g-perConbt">相册</span>
+					<span class="g-perConR"></span>
+				</p>
+				<p class="g-perUn g-perUnb"></p>
+			</h3>
+			<!-- 设置 -->
+			<h3 class="g-perCen g-perCenb">
+				<p class="g-perCenCon" id="shezhi">
+					<span class="g-perConxb g-perConsz">
+						<img src="img/g-persz.png">
+					</span>
+					<span class="g-perConbt">设置</span>
+					<span class="g-perConR"></span>
+				</p>
+				<p class="g-perUn"></p>
+			</h3>
+		</div>
+	</div>
+	<script>
+		$(function () {
+			$("#g-perTimg").on("click",function(){
+				window.open("dl.html","_self");
+			});
+			$("#w-Return").on("click",function(){
+				history.back();
+			})
+			$("#g-perMyCollect").click(function(){
+				window.open("collect.html","_self");
+			});
+			$("#g-perMyAlbum").click(function(){
+				window.open("album.html","_self");
+			});
+			$("#mymess").on("click",function(){
+				window.open("mymessage.html","_self");
+			});
+			$("#myfriend").on("click",function(){
+				window.open("friends.html","_self");
+			});
+			$("#shezhi").on("click",function(){
+				window.open("shezhi.html","_self");
+			});
+			if(getcookie("登录")=="true"){
+				$("#g-perTop h3").eq(0).attr('id','g-perTopH3');
+				$("#g-perTop h3").eq(0).html(getcookie("账号"));
+			}else{
+				$("#g-perTop h3").eq(0).attr('id',' ');
+				$("#g-perTop h3").eq(0).html("点击登录");
+			}
+		})
+	</script>
+</body>
+</html>

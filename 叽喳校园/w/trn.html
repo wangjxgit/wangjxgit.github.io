@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>trn</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/ort.js"></script>
+</head>
+<body>
+	<div class="w_trn">
+		<div class="w_head">
+			<a class="w_hd1" href="script:;">
+				<img src="img/w_t6.png" alt="">
+			</a>
+			<h2>详细</h2>
+		</div>
+		<div class="w_trn1">
+			<h2>web前端开发工程师</h2>
+			<div class="w_trn2"><span>09-10 08:00 北大校园新闻</span><var>李慧思</var></div>
+			<div class="w_trn3">
+				<img src="img/w_t14.jpg" alt="">
+			</div>
+			<p>今天是胜利日，看了阅兵，感受到了各种正能量。事后想想，我是通过什么途径感受到的呢？媒介！这是一个时时刻刻都在我们身边，却容易被我们忽略的东西……新华社和人民日..</p>
+			<p>今天是胜利日，看了阅兵，感受到了各种正能量。事后想想，我是通过什么途径感受到的呢？媒介！这是一个时时刻刻都在我们身边，却容易被我们忽略的东西……新华社和人民日..</p>
+		</div>
+		<div class="w_trn4">
+			<div id="w3">
+				<input type="text" name="" value="写评论">
+				<a class="w_trn5" href="script:;">
+					<img src="img/w_t16.png" alt="">
+				</a>
+				<a class="w_trn6" href="script:;">
+					<img src="img/w_t15.png" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+	<script>
+	$(function(){
+		$("#w3 input").focus(function(){
+			if ($("#w3 input").val()=="写评论"){
+				$("#w3 input").val("");
+				$("#w3 input").css({
+					"background": "#fff",
+					"text-indent": "17px"
+				});
+			}
+		});
+		$("#w3 input").blur(function(){
+			if ($("#w3 input").val()==""){
+				$("#w3 input").val("写评论");
+				$("#w3 input").css({
+					"background": "url(img/w_t17.png) 17px 7px no-repeat #fff",
+					"text-indent": "57px"
+				});
+			}
+		});
+		$("#w3 input").blur(function(){
+			if ($("#w3 input").val()==""){
+				$("#w3 p").css("display","block");
+			}
+		});
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/ort.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/myjs.js"></script>
+</head>
+<body>
+	<div class="b-wrapper">
+		<div class="g-newsHeader">
+			<div id="w-Return" style="display:block"></div>
+		</div>
+		<div id="b-subnav1">
+			<img src="img/b-dtx.jpg" alt="">
+		</div>
+		<div class="b-menu">
+			<div class="b-submenu">
+				<div id="b-submenu1-1">
+					<img id="b-submenu1i-1" src="img/b-dxx.png" alt="">
+					<input id="b-submenu1i2" type="text" name="" value="E-mail address">
+				</div>
+				<div id="b-submenu2-1">
+					<img id="b-submenu2i-1" src="img/b-s.png" alt="">
+					<input id="b-submenu2i2" type="password" name="" value="........">
+				</div>
+				<div id="b-submenu7"><a href="javascript:;">login</a></div>
+				<div id="b-submenu8">
+					<div id="b-submenu8d"><a id="b-submenu6da" href="javascript:;">注册账号</a></div>
+					<div id="b-submenu8d1"><a id="b-submenu6d1a" href="javascript:;">忘记密码</a></div>
+				</div>
+			</div>
+			<div class="b-submenu9">
+				<div class="b-submenu9d"></div>
+				<p class="b-submenu9p">社交账号一键登录</p>
+				<div class="b-submenu9d1"></div>
+			</div>
+			<ul class="b-footer">
+				<li id="b-link">
+					<img id="b-linki" src="img/b-wx.png" alt="">
+					<p>微信登录</p>
+				</li>
+				<li id="b-link1">
+					<img id="b-linki1" src="img/b-wb.png" alt="">
+					<p>微博登录</p>
+				</li>
+				<li id="b-link2">
+					<img id="b-linki2" src="img/b-qq.png" alt="">
+					<p>QQ登录</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		// 返回首页
+		$("#w-Return").click(function () {
+			window.open("inde.html","_self")
+		});
+		$("#b-submenu6da").on("click",function(){
+			window.open("zc.html","_self");
+		});
+		$("#b-submenu1-1 input").focus(function () {
+			if ($("#b-submenu1-1 input").get(0).value=="E-mail address") {
+				$("#b-submenu1-1 input").val("");
+				$("#b-submenu1-1 input").css("color","#000");
+			}
+		});
+		$("#b-submenu1-1 input").blur(function () {
+			if ($("#b-submenu1-1 input").get(0).value=="") {
+				$("#b-submenu1-1 input").val("E-mail address");
+				$("#b-submenu1-1 input").css("color","#ccc");
+			}
+		})
+		$("#b-submenu2-1 input").focus(function () {
+			if ($("#b-submenu2-1 input").get(0).value=="........") {
+				$("#b-submenu2-1 input").val("");
+				$("#b-submenu2-1 input").css("color","#000");
+			}
+		});
+		$("#b-submenu2-1 input").blur(function () {
+			if ($("#b-submenu2-1 input").get(0).value=="") {
+				$("#b-submenu2-1 input").val("........");
+				$("#b-submenu2-1 input").css("color","#ccc");
+			}
+		});
+		$("#b-submenu7").click(function(){
+			if($("#b-submenu1-1 input").get(0).value!=getcookie("账号")||$("#b-submenu2-1 input").get(0).value!=getcookie("密码")){
+				alert("请正确输入账号密码");
+			}else{
+				setcookie(3,"登录","true");
+				window.open("inde.html","_self");
+			}
+		})
+	</script>
+</body>
+</html>
